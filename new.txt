@@ -1,0 +1,10 @@
+http://localhost:8809/api/v1/addproduct
+
+{
+   "productId":"S103",
+   "productName":"COLDRINK",
+   "productSmallPrice":"$12",
+   "productMediumPrice":"$13",
+   "productLargePrice":"$44",
+   "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+}

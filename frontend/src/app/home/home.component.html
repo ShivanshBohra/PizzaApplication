@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div id="main">
+    <button class="btn" (click)="movetohomepage()">HOME</button>
+    <button class="btn" (click)="movetoorderpage()">ORDERS</button>
+    <button class="btn" id="btn3" (click)="movetologinpage()" *ngIf="login">LOGIN</button>
+    <button class="btn" id="btn4" (click)="movetosignup()" *ngIf="signup">SIGNUP</button>
+    <button class="btn" id="btn5" (click)="movetologout()" *ngIf="logout">Log Out</button>
+    <!-- <button class="btn" id="btn6" (click)="viewcart()" *ngIf="usercart">Cart</button> -->
+
+</div>
+
+
+<!-- This is the main view of the application. It is the view that is displayed when the user is not logged in. -->
+<div id="btnctn">
+    <button class="btn1" (click)="showpizza()" *ngIf="ab">Pizza Menu</button>
+ </div>
+
+<div  class="container12" *ngIf="mainview">
+
+         <div class="ab" *ngFor="let a of allproducts " >
+
+           <img src="{{a.imageUrl}}" alt="">
+             <h1>{{a.productName}}</h1>
+             <p>Small : {{a.productSmallPrice}}</p>
+              <p>Medium : {{a.productMediumPrice}}</p>
+               <p>Large : {{a.productLargePrice}}</p>
+
+               <button *ngIf="cart" class="btn" (click)="movetoviewcart(a)" >Add to cart</button>
+</div>
+
+</div>
+
+
+ <div  *ngIf="cartview" id="cartct">
+    <button class="btn" id="btn7" (click)="back()" >Close Cart</button>
+    <button class="btn" id="btn8" (click)="places()" >place order</button>
+
+    <div  class="container12" >
+
+
+        <div class="ab" *ngFor="let a of allorders" >
+        <h1>{{a.productName}}</h1>
+        <p>Small : {{a.productSmallPrice}}</p>
+         <p>Medium : {{a.productMediumPrice}}</p>
+          <p>Large : {{a.productLargePrice}}</p>
+        </div>
+
+</div>
+</div>

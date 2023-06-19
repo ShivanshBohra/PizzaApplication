@@ -1,0 +1,71 @@
+<app-header></app-header>
+<div id="head2">
+  <button class="btn2" (click)="movetohomepage()">HOME</button>
+  <button class="btn2" (click)="movetohomepage()">MENU</button>
+  <button class="btn2" (click)="movetoorderpage()">ORDERS</button>
+  <button class="btn2" id="btn3" (click)="movetologinpage()">LOGIN</button>
+  <button class="btn2" id="btn4" (click)="movetosignup()">SIGNUP</button>
+</div>
+<div id="signup" style ="margin-top:20px;margin-left:auto;margin-right:auto;width:800px;background-color:rgb(132,132,214);padding:20px;border-radius:15px;">
+  <h1>Fill The Details</h1>
+  <form [formGroup]="signupformdata"(ngSubmit)="saveCustomer()" >
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name"/>
+    <mat-hint align="end" *ngIf="name.invalid">Name is Must</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>EmailId</mat-label>
+      <input matInput formControlName="emailId"/>
+    <mat-hint align="end"*ngIf="emailId.invalid">Email ID is Must</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" required pattern=”^[a-zA-Z0–9_.+-]+@[a-zA-Z0–9-]+.[a-zA-Z0–9-.]+$”/>
+    <mat-hint align="end" *ngIf="password.invalid">Password is Must</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Mobile No.</mat-label >
+      <input matInput formControlName="phoneNo"/>
+    <mat-hint align="end" *ngIf="phoneNo.invalid ">MobileNo. min 10 digits</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address"/>
+    <!-- <mat-hint align="end">error</mat-hint> -->
+    </mat-form-field>
+   
+   
+    <!-- <label>Name :</label>
+    <br>
+    <input type="text" formControlName="name"> -->
+    <!-- <br>
+    <br>
+    <label>Email Id :</label>
+    <br>
+    <input type="text" formControlName="emailId">
+    <br>
+    <br>
+    <label>Password :</label>
+    <br>
+    <input type="password" formControlName="password">
+    <br>
+    <br>
+    <label>Mobile Number :</label>
+    <br>
+    <input type="text" formControlName="phoneNo">
+    <br>
+    <br>
+    <label>Address :</label>
+    <br>
+    <input type="text" formControlName="address">
+    <br>
+    <br> -->
+    <button (click)= "sendsignupdata()" mat-raised-button color="primary" [disabled]= "signupformdata.invalid">Save Customer </button>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<button id="btn3" (click)="movetohome()">Home</button>
+<button id="btn1" (click)="getuserdetails()">Show Your Details</button>
+<button id="btn2" (click)="getorderdetails()">Show Your Orders</button>
+
+<div id="details" *ngIf="userdetails">
+    <h1 id="am">User Details : </h1>
+    <p class="po">Email Id : {{customer?.emailId}}</p>
+    <p class="po">Name : {{customer?.name}}</p>
+    <p class="po">Address : {{customer?.address}}</p>
+    <p class="po">Phone No : {{customer?.phoneNo}}</p>
+</div>
+
+<div *ngIf="orders">
+    <h1>Your Previous Orders : </h1>
+
+    <div  class="container12" >
+
+
+        <div id="ab" *ngFor="let a of Orders" >
+          <img src="{{a.imageUrl}}" alt="">
+        <h1>{{a.productName}}</h1>
+        <p>Small : {{a.productSmallPrice}}</p>
+         <p>Medium : {{a.productMediumPrice}}</p>
+          <p>Large : {{a.productLargePrice}}</p>
+          <button class="noselect" (click)="deleteorder(a.productId)" class="deleteb"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+        </div>
+</div>
+</div>

@@ -1,0 +1,167 @@
+.conatiner12
+{
+    width:900px;
+    margin-top: 20px;
+    padding: 50px;
+    display:flex;
+    justify-content: space-evenly;
+
+}
+.ab{
+    display: inline-block;
+    width: auto;
+    height:auto;
+    display: inline-block;
+    justify-content: center;
+    margin: 40px;
+    margin-left: 40px;
+    border:solid 2px black;
+    border-radius:10px;
+    align-items: center;
+    padding:20px;
+}
+
+h1{
+    font-size: 30px;
+}
+p
+{
+    font-size: 20px;
+}
+
+#btnctn
+{
+    width:100%;
+    height:100px;
+    justify-content:space-evenly;
+    padding-left: 140px;
+    margin-top: 20px;
+
+}
+
+.btn1
+{
+    width:250px;
+    height:40px;
+    margin-right: 200px;
+}
+.btn2
+{
+    width:150px;
+    height:40px;
+    margin-top: 10px;
+    margin-left: 25px;
+
+}
+
+#head2
+{
+    height:60px;
+    width:100%;
+    margin-top: -25px;
+
+}
+p{
+   justify-content: center;
+}
+h1{
+   justify-content: center;
+}
+
+#btn3
+{
+
+    margin-left: 600px;
+}
+#btn4
+{
+    margin-left: 50px;
+
+}
+#menu
+{
+    border:solid coral 2px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 25px;
+    margin-top: 15px;
+    height: 250px;
+    padding: 20px;
+}
+img{
+    width:245px;
+    height: 150px;
+    border: 2px white solid;
+    border-radius: 10px;
+}
+
+#btn34
+{
+    width:100px;
+    height: 25px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+    border: 2px balck solid;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#btn5
+{
+    margin-left: 600px;
+}
+#btn6
+{
+    margin-left: 50px;
+}
+
+#btn7
+{
+    margin-left: 300px;
+}
+#btn8
+{
+    margin-left: 250px;
+}
+
+#cartct
+{
+    width:80%;
+    height: 300px;
+    border:5px solid coral;
+    margin-left: 90px;
+}
+
+
+
+
+
+
+
+.btn {
+  padding: 1rem 2rem;
+  font-weight: 700;
+  background: rgb(255, 255, 255);
+  color: blueviolet;
+  border-radius: .5rem;
+  border-bottom: 2px solid blueviolet;
+  border-right: 2px solid blueviolet;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transition-duration: 1s;
+  transition-property: border-top,
+  border-left,
+  border-bottom,
+  border-right,
+  box-shadow;
+}
+
+.btn:hover {
+  border-top: 2px solid blueviolet;
+  border-left: 2px solid blueviolet;
+  border-bottom: 2px solid rgb(238, 103, 238);
+  border-right: 2px solid rgb(238, 103, 238);
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}

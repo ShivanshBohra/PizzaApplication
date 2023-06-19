@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div id="head2">
+    <button class="btn" (click)="movetohomepage()">HOME</button>
+    <button class="btn" (click)="movetohomepage()">MENU</button>
+    <button class="btn" (click)="movetoorderpage()">ORDERS</button>
+    <button class="btn" id="btn3" (click)="movetologinpage()">LOGIN</button>
+    <button class="btn" id="btn4" (click)="movetosignup()">SIGNUP</button>
+</div>
+
+<div id="signup" style ="margin-top:20px;margin-left:auto;margin-right:auto;width:800px;background-color:rgb(139, 139, 222);padding:20px;border-radius:15px;">
+    <h1>Input Login Credentials : </h1>
+    <form [formGroup]="loginformdata" (ngSubmit)="loginCustomer()" >
+      <section>
+       <mat-form-field appearance="outline">
+      <mat-label>Email Id</mat-label>
+      <input matInput formControlName="emailId"/>
+    <mat-hint align="end" *ngIf="emailId.invalid">EmailId is Must</mat-hint>
+    </mat-form-field>
+      </section>
+        <br>
+        <br>
+      <section>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password"/>
+        <mat-hint align="end" *ngIf="password.invalid">Password is Must</mat-hint>
+        </mat-form-field>
+      </section>
+        <br>
+
+      <button (click)= "sendLoginData()"  mat-raised-button color="primary" [disabled]= "loginformdata.invalid">Login </button>
+         
+        <!-- <p>Login</p>
+        <svg stroke-width="4" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+        </svg>
+      </button> -->
+    </form>
+</div>
+

@@ -1,0 +1,202 @@
+#signup
+{
+    width:500px;
+
+    border-radius: 10%;
+    margin-top:15px;
+    padding: 25px;
+    margin-left: 500px;
+    float:top;
+
+}
+
+input{
+    width:450px;
+    height:30px;
+}
+
+
+
+
+#btn3
+{
+    margin-left: 600px;
+
+}
+#btn4
+{
+    margin-left: 50px;
+
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: .5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  border: 3px solid #000;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.user-label {
+  position: absolute;
+  left: 15px;
+  color: #000;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 350ms;
+}
+
+.input:focus,
+input:valid {
+  outline: none;
+  --angle: 0deg;
+  border-bottom: 3px solid;
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  animation: 3s rotate9234 linear infinite;
+}
+
+@keyframes rotate9234 {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.input:focus~label,
+input:valid~label {
+  transform: translateY(235%) scale(1);
+  background-color: #f0f8ff;
+  padding: 0 .2em;
+  color: black;
+}
+
+/* ===== Login Button CSS  === */
+.button1 {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+/* .button1 {
+  --primary-color: #111;
+  --hovered-color: #c84747;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+} */
+
+.button1 p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color)
+}
+
+.button1::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.button1 p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Login";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.button1:hover::after {
+  width: 100%;
+}
+
+.button1:hover p::before {
+  width: 100%;
+}
+
+.button1:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color)
+}
+
+.button1 svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+mat-form-field{
+  width: 100%;
+}
+

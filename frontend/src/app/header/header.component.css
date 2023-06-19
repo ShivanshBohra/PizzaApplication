@@ -1,0 +1,18 @@
+
+
+.body1{
+  background-color: white;
+  margin-top: 60px;
+  color: #fff;
+}
+.main1{
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+#eyes, #eyes img{
+  position: absolute;
+  height: 11px;
+  width: 11px;
+}
